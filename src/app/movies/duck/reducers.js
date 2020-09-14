@@ -8,11 +8,11 @@ const initialMovies = {
 const moviesReducer = (state = initialMovies, action) => {
   switch (action.type) {
     case types.ADD_MOVIE:
-      return { ...state, list: [...state.list, action.movie] };
+      return { ...state, list: [...state.list, action.item] };
     case types.DELETE_MOVIE:
       return {
         ...state,
-        list: state.list.filter((item) => item !== action.movie)
+        list: state.list.filter((item) => item !== action.item)
       };
     case types.RESET_MOVIES:
       return { ...state, list: [] };
